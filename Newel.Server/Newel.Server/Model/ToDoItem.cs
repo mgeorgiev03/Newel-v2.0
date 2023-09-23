@@ -9,7 +9,7 @@ namespace Newel.Server.Model
 
         public bool IsCompleted { get; set; }
 
-        public DateTime dateTime { get; set; }
+        public DateTime DateTime { get; set; }
 
         public virtual List<ToDoItem> Subtasks { get; set; }
     }

@@ -7,7 +7,7 @@ namespace Newel.Server.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
-        private readonly NewelDbContext context;
+        internal readonly NewelDbContext context;
         public BaseRepository(NewelDbContext _context)
         {
             context = _context;

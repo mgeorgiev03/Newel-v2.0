@@ -1,0 +1,14 @@
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\bin\Debug\net7.0\Newel.Server.deps.json
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\bin\Debug\net7.0\Newel.Server.runtimeconfig.json
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\bin\Debug\net7.0\Newel.Server.dll
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\bin\Debug\net7.0\Newel.Server.pdb
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.csproj.AssemblyReference.cache
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.AssemblyInfoInputs.cache
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.AssemblyInfo.cs
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.csproj.CoreCompileInputs.cache
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.dll
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\refint\Newel.Server.dll
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.pdb
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\Newel.Server.genruntimeconfig.cache
+C:\Users\maxim\Desktop\Newel\Newel.Server\Newel.Server\obj\Debug\net7.0\ref\Newel.Server.dll

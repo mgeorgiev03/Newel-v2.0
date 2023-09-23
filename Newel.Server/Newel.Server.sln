@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Newel.Server\Data.csproj", "{AEA7E87F-4D9B-44F6-A3B6-F9BAF1DAA381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{0F08F0FD-BC2F-44E8-83E4-A5C7B65F0965}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEA7E87F-4D9B-44F6-A3B6-F9BAF1DAA381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA7E87F-4D9B-44F6-A3B6-F9BAF1DAA381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA7E87F-4D9B-44F6-A3B6-F9BAF1DAA381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA7E87F-4D9B-44F6-A3B6-F9BAF1DAA381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F08F0FD-BC2F-44E8-83E4-A5C7B65F0965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F08F0FD-BC2F-44E8-83E4-A5C7B65F0965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F08F0FD-BC2F-44E8-83E4-A5C7B65F0965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F08F0FD-BC2F-44E8-83E4-A5C7B65F0965}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A86EF76-E251-42F3-9923-279B4E6B05FD}
+	EndGlobalSection
+EndGlobal

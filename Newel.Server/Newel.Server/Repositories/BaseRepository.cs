@@ -13,10 +13,12 @@ namespace Newel.Server.Repositories
             context = _context;
         }
 
-        public async Task CreateAsync(T entity)
+        public async Task<Guid> CreateAsync(T entity)
         {
-            await context.Set<T>().AddAsync(entity);
+            var entry = await context.Set<T>().AddAsync(entity);
             await context.SaveChangesAsync();
+
+            return entry.Entity.Id;
         }
 
         public async Task DeleteAsync(Guid id)

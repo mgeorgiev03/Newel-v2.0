@@ -5,7 +5,7 @@ namespace Newel.Server.Repositories.IRepositories
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-        public Task CreateAsync(T entity);
+        public Task<Guid> CreateAsync(T entity);
         public Task UpdateAsync(T entity);
         public Task DeleteAsync(Guid id);
         public ValueTask<T> GetByIdAsync(Guid id);

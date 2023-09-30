@@ -22,7 +22,7 @@ namespace API.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPatch]
         public async Task<IActionResult> Authenticate([FromBody] LogInRequest model)
         {
             User? user = repo.GetByEmail(model.Email);
@@ -36,7 +36,7 @@ namespace API.Controllers
             return BadRequest("Email address or password don't match");
         }
 
-        [HttpPut("{id}")]
+        [HttpPatch("{id}")]
         public async Task<IActionResult> UpdatePassword([FromRoute] Guid id, [FromBody] UserUpdatePasswordRequest model)
         {
             var user = await repo.GetByIdAsync(id);
@@ -64,11 +64,13 @@ namespace API.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest();
-        
-            var user = mapper.Map<User>(model);
-            var createUser = await repo.CreateAsync(user);
 
-            return Ok(createUser);
+            model.Password = BCryptHelper.HashPassword(model.Password, BCryptHelper.GenerateSalt()); 
+
+            var user = mapper.Map<User>(model);
+            var id = await repo.CreateAsync(user);
+
+            return Ok(id);
         }
 
         [HttpPut("{id}")]
@@ -79,6 +81,11 @@ namespace API.Controllers
 
             var user = mapper.Map<User>(model);
             user.Id = id;
+
+            //need to get password of entity because this request won't change it and wont have a form for it
+            //hope this is enough
+            User entity = await repo.GetByIdAsync(id);
+            model.Password = entity.Password;
 
             try
             {

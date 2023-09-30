@@ -81,7 +81,7 @@ namespace API.Controllers
         {
             var tasks = await repo.GetAllAsync();
 
-            var models = mapper.Map<List<ToDoItem>>(tasks);
+            var models = mapper.Map<List<TaskResponseModel>>(tasks);
 
             return Ok(models);
         }

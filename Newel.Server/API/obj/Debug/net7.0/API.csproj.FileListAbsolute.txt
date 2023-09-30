@@ -52,9 +52,7 @@ C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\runtimes\win
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\Data.dll
-C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\Service.dll
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\Data.pdb
-C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\bin\Debug\net7.0\Service.pdb
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache

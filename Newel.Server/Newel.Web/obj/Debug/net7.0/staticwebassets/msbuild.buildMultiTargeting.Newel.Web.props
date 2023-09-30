@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Newel.Web.props" />
+</Project>

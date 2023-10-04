@@ -21,21 +21,6 @@ namespace API.Controllers
             mapper = _mapper;
         }
 
-
-        [HttpPatch]
-        public async Task<IActionResult> Authenticate([FromBody] LogInRequest model)
-        {
-            User? user = repo.GetByEmail(model.Email);
-
-            if (user == null)
-                return NotFound();
-
-            if (BCryptHelper.Verify(model.Password, user.Password))
-                return Ok(mapper.Map<UserResponseModel>(model));
-
-            return BadRequest("Email address or password don't match");
-        }
-
         [HttpPatch("{id}")]
         public async Task<IActionResult> UpdatePassword([FromRoute] Guid id, [FromBody] UserUpdatePasswordRequest model)
         {
@@ -59,7 +44,7 @@ namespace API.Controllers
             return NoContent();
         }
 
-        [HttpPost]
+        [HttpPost]  
         public async Task<IActionResult> CreateUser([FromBody] UserRequestModel model)
         {
             if (!ModelState.IsValid)
@@ -136,5 +121,18 @@ namespace API.Controllers
 
             return Ok(model);
         }
+
+        //[HttpGet("{email}")]
+        //public async Task<IActionResult> GetByEmail([FromRoute] string email)
+        //{
+        //    var user = await repo.GetByEmail(email);
+
+        //    if (user == null)
+        //        return NotFound();
+
+        //    var model = mapper.Map<UserResponseModel>(user);
+
+        //    return Ok(model);
+        //}
     }
 }

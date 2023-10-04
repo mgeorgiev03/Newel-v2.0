@@ -1,21 +1,43 @@
 ﻿@page
 @model IndexModel
+@using Newel.Web.Models.User
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
-    <button type="button">Log In</button>
+    @if (Model.IsLogged)
+    {
+        <div>Edit/Delete link goes here !!! not implemented</div>
+
+        <div class="container">
+            <button type="button">
+                <a asp-area="" asp-page="/LogIn">Edit</a>
+            </button>
+        </div>
+
+        <div class="container">
+            <button type="button">
+                <a asp-area="" asp-page="/LogIn">Delete</a>
+            </button>
+        </div>
+    }
+    else
+    {
+        <div class="container">
+            <button type="button">
+                <a asp-area="" asp-page="/LogIn">Log In</a>
+            </button>
+        </div>
+
+        <div class="container">
+            <button type="button">
+                <a asp-area="" asp-page="/Register">Register</a>
+            </button>
+        </div>
+    }
 
 
-    <div class="container">
-        <button type="button">
-            <a asp-area="" asp-page="/Register">Register</a>
-        </button>
-    </div>
-
-
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
 </div>

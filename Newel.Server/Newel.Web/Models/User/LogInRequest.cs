@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace API.Models
+namespace Newel.Web.Models.User
 {
     public class LogInRequest
     {

@@ -11,6 +11,9 @@ namespace Newel.Web.Pages
     {
         private readonly HttpClient client;
 
+        [BindProperty]
+        public LogInRequest Model { get; set; }
+
         public RegisterModel(HttpClient httpClient)
         {
             client = httpClient;
@@ -23,16 +26,15 @@ namespace Newel.Web.Pages
 
         public async Task<IActionResult> OnPostAsync()  
         {
-            UserRequestModel model = new UserRequestModel();
-            model.Name = Request.Form["name"];
-            model.Email = Request.Form["email"];
-            model.Password = Request.Form["password"];
-
-            var modelContent = new StringContent(JsonConvert.SerializeObject(model), Encoding.UTF8, "application/json");
+            var modelContent = new StringContent(JsonConvert.SerializeObject(Model), Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = await client.PostAsync("https://localhost:7228/api/user", modelContent);
-            //make a http post request to server
-            return RedirectToPage(response);
+            
+            string responseBody = await response.Content.ReadAsStringAsync();
+
+            HttpContext.Response.Cookies.Append("NewelCookie", responseBody);
+
+            return RedirectToPage("/Index");
         }
     }
 }

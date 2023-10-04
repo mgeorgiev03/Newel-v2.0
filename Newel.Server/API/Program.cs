@@ -1,3 +1,5 @@
+using API.Services;
+using API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Newel.Server;
 using Newel.Server.Repositories;
@@ -17,6 +19,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IToDoListRepository, ToDoListRepository>();
 builder.Services.AddScoped<IToDoItemRepository, ToDoItemRepository>();
+
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

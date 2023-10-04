@@ -4,6 +4,6 @@ namespace Newel.Server.Repositories.IRepositories
 {
     public interface IUserRepository : IBaseRepository<User>
     {
-        User? GetByEmail(string email);
+        Task<User?> GetByEmail(string email);
     }
 }

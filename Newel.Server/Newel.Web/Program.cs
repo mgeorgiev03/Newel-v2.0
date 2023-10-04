@@ -6,6 +6,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddHttpClient("LocalApi", client =>
     client.BaseAddress = new Uri("https://localhost:7228/api/"));
 
+builder.Services.ConfigureApplicationCookie(options=>{
+    options.ExpireTimeSpan = TimeSpan.FromHours(1);
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

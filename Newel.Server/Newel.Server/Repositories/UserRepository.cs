@@ -1,4 +1,5 @@
-﻿using Newel.Server.Model;
+﻿using Microsoft.EntityFrameworkCore;
+using Newel.Server.Model;
 using Newel.Server.Repositories.IRepositories;
 
 namespace Newel.Server.Repositories
@@ -9,9 +10,9 @@ namespace Newel.Server.Repositories
         {
         }
 
-        public User? GetByEmail(string email)
+        public async Task<User?> GetByEmail(string email)
         {
-            return context.Set<User>().SingleOrDefault(u => u.Email == email);
+            return await context.Set<User>().SingleOrDefaultAsync(u => u.Email == email);
         }
     }
 }

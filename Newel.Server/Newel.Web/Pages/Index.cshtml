@@ -9,17 +9,15 @@
 
     @if (Model.IsLogged)
     {
-        <div>Edit/Delete link goes here !!! not implemented</div>
-
         <div class="container">
             <button type="button">
-                <a asp-area="" asp-page="/LogIn">Edit</a>
+                <a asp-area="" asp-page="/Edit">Edit</a>
             </button>
         </div>
 
         <div class="container">
             <button type="button">
-                <a asp-area="" asp-page="/LogIn">Delete</a>
+                <a asp-area="" asp-page="/Delete">Delete</a>
             </button>
         </div>
     }

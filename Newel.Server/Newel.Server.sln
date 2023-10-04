@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Newel.Server\Data.c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{5EC68F2C-4047-4D47-ABC1-EF1DFEFCFF39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newel.Web", "Newel.Web\Newel.Web.csproj", "{7C37B5ED-4D41-4BA0-8D25-27082F5A0E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Newel.Web", "Newel.Web\Newel.Web.csproj", "{7C37B5ED-4D41-4BA0-8D25-27082F5A0E93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

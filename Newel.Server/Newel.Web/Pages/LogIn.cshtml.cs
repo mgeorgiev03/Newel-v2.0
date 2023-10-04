@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newel.Web.Models.User;
 using Newtonsoft.Json;
-using System.Net.Http;
 using System.Text;
 
 namespace Newel.Web.Pages

@@ -11,12 +11,13 @@ namespace Newel.Web.Pages
     {
         private readonly HttpClient client;
 
-        [BindProperty]
-        public LogInRequest Model { get; set; }
+        //[BindProperty]
+        public UserRequestModel Model { get; set; }
 
         public RegisterModel(HttpClient httpClient)
         {
             client = httpClient;
+            Model = new UserRequestModel();
         }
 
         public void OnGet()
@@ -26,13 +27,24 @@ namespace Newel.Web.Pages
 
         public async Task<IActionResult> OnPostAsync()  
         {
+            if (Request.Cookies["NewelCookie"] != null)
+                Response.Cookies.Delete("NewelCookie");
+
+
+            Model.Name = Request.Form["name"];
+            Model.Email = Request.Form["email"];
+            Model.Password = Request.Form["password"];
+
             var modelContent = new StringContent(JsonConvert.SerializeObject(Model), Encoding.UTF8, "application/json");
+            Console.WriteLine(modelContent);
+
 
             HttpResponseMessage response = await client.PostAsync("https://localhost:7228/api/user", modelContent);
             
             string responseBody = await response.Content.ReadAsStringAsync();
 
-            HttpContext.Response.Cookies.Append("NewelCookie", responseBody);
+            if (response.IsSuccessStatusCode)
+                HttpContext.Response.Cookies.Append("NewelCookie", responseBody);
 
             return RedirectToPage("/Index");
         }

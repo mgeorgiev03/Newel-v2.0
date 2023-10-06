@@ -61,8 +61,6 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser([FromRoute] Guid id, [FromBody] UserRequestModel model)
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
 
             var user = mapper.Map<User>(model);
             user.Id = id;
@@ -84,20 +82,20 @@ namespace API.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser([FromRoute] Guid id)
-        {
-            try
-            {
-                await repo.DeleteAsync(id);
-            }
-            catch (ArgumentException ex)
-            {
-                return NotFound(ex);
-            }
+        //[HttpDelete("{id}")]
+        //public async Task<IActionResult> DeleteUser([FromRoute] Guid id)
+        //{
+        //    try
+        //    {
+        //        await repo.DeleteAsync(id);
+        //    }
+        //    catch (ArgumentException ex)
+        //    {
+        //        return NotFound(ex);
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()

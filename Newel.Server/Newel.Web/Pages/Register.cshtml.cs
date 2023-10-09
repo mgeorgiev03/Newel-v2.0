@@ -4,6 +4,7 @@ using Newel.Web.Models.User;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Newel.Web.Pages
 {
@@ -36,7 +37,9 @@ namespace Newel.Web.Pages
             Model.Password = Request.Form["password"];
 
             var modelContent = new StringContent(JsonConvert.SerializeObject(Model), Encoding.UTF8, "application/json");
-            Console.WriteLine(modelContent);
+
+            string content = await modelContent.ReadAsStringAsync(); 
+            Console.WriteLine(content);
 
 
             HttpResponseMessage response = await client.PostAsync("https://localhost:7228/api/user", modelContent);

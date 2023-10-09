@@ -12,8 +12,7 @@ namespace API.Models.UserModel
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
-        [MinLength(6), MaxLength(30)]
+        [Required]  
         public string Password { get; set; } = string.Empty;
     }
 }

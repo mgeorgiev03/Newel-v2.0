@@ -61,9 +61,12 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser([FromRoute] Guid id, [FromBody] UserRequestModel model)
         {
-
+            Console.WriteLine("hmmm1");
             var user = mapper.Map<User>(model);
+            //User user = new User();
             user.Id = id;
+            user.Name = model.Name;
+            user.Email = model.Email;
 
             //need to get password of entity because this request won't change it and wont have a form for it
             //hope this is enough
@@ -72,6 +75,7 @@ namespace API.Controllers
 
             try
             {
+                Console.WriteLine("hmmm");
                 await repo.UpdateAsync(user);
             }
             catch (ArgumentException ex)

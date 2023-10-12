@@ -6,5 +6,7 @@ namespace API.Models.ListModel
     {
         [Required]
         public string Name { get; set; }
+
+        public Guid userId { get; set; }
     }
 }

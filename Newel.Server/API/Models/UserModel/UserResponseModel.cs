@@ -15,5 +15,8 @@ namespace API.Models.UserModel
         [Required]
         [MinLength(6), MaxLength(30)]
         public string Password { get; set; } = string.Empty;
+
+
+        //public ICollection<Guid> ListGuids { get; set; }
     }
 }

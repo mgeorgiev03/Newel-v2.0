@@ -8,7 +8,7 @@ using Newel.Server;
 
 #nullable disable
 
-namespace Newel.Server.Migrations
+namespace Data.Migrations
 {
     [DbContext(typeof(NewelDbContext))]
     partial class NewelDbContextModelSnapshot : ModelSnapshot
@@ -28,7 +28,7 @@ namespace Newel.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("DateTime")
+                    b.Property<DateTime?>("DateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsCompleted")
@@ -38,15 +38,10 @@ namespace Newel.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("ToDoItemId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid?>("ToDoListId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ToDoItemId");
 
                     b.HasIndex("ToDoListId");
 
@@ -63,7 +58,7 @@ namespace Newel.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("UserId")
+                    b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -99,10 +94,6 @@ namespace Newel.Server.Migrations
 
             modelBuilder.Entity("Newel.Server.Model.ToDoItem", b =>
                 {
-                    b.HasOne("Newel.Server.Model.ToDoItem", null)
-                        .WithMany("Subtasks")
-                        .HasForeignKey("ToDoItemId");
-
                     b.HasOne("Newel.Server.Model.ToDoList", null)
                         .WithMany("Tasks")
                         .HasForeignKey("ToDoListId");
@@ -112,12 +103,9 @@ namespace Newel.Server.Migrations
                 {
                     b.HasOne("Newel.Server.Model.User", null)
                         .WithMany("Lists")
-                        .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("Newel.Server.Model.ToDoItem", b =>
-                {
-                    b.Navigation("Subtasks");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Newel.Server.Model.ToDoList", b =>

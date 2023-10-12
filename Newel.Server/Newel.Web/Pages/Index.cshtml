@@ -9,31 +9,42 @@
 
     @if (Model.IsLogged)
     {
+        //maybe here
         <div class="container">
             <button type="button">
-                <a asp-area="" asp-page="/Edit">Edit</a>
+                <a asp-area="" asp-page="/List/Create">Create New List</a>
             </button>
         </div>
 
         <div class="container">
             <button type="button">
-                <a asp-area="" asp-page="/Delete">Delete</a>
-            </button>
-        </div>
-    }
-    else
-    {
-        <div class="container">
-            <button type="button">
-                <a asp-area="" asp-page="/LogIn">Log In</a>
+                <a asp-area="" asp-page="/List/Edit">Edit List</a>
             </button>
         </div>
 
-        <div class="container">
-            <button type="button">
-                <a asp-area="" asp-page="/Register">Register</a>
-            </button>
-        </div>
+
+
+        <form method="post" asp-page-handler="Form1">
+
+            <select id="dropdown-button" asp-for="CurrentList.Id">
+                <option value="">-- Select list --</option>
+                @foreach (var option in Model.userLists)
+                {
+                    <option value="@option.Id">
+                        <button type="button">
+                            @option.Name
+                        </button>
+                    </option>
+                }
+
+            </select>
+            <button type="submit" name="submitBtn">Submit</button>
+        </form>
+
+        @if (Model.CurrentList != null)
+        {
+            <label>Current list: @Model.CurrentList.Name</label>
+        }
     }
 
 

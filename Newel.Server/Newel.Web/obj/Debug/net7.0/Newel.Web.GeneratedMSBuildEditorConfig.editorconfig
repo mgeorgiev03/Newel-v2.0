@@ -16,36 +16,44 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\maxim\Desktop\Newel-v2.0\Newel.Server\Newel.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/LogIn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nSW4uY3NodG1s
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/List/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/List/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/User/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/User/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/User/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/maxim/Desktop/Newel-v2.0/Newel.Server/Newel.Web/Pages/_ViewImports.cshtml]

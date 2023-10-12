@@ -61,9 +61,8 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser([FromRoute] Guid id, [FromBody] UserRequestModel model)
         {
-            Console.WriteLine("hmmm1");
             var user = mapper.Map<User>(model);
-            //User user = new User();
+
             user.Id = id;
             user.Name = model.Name;
             user.Email = model.Email;
@@ -71,11 +70,10 @@ namespace API.Controllers
             //need to get password of entity because this request won't change it and wont have a form for it
             //hope this is enough
             User entity = await repo.GetByIdAsync(id);
-            model.Password = entity.Password;
+            user.Password = entity.Password;
 
             try
             {
-                Console.WriteLine("hmmm");
                 await repo.UpdateAsync(user);
             }
             catch (ArgumentException ex)
@@ -85,21 +83,6 @@ namespace API.Controllers
 
             return NoContent();
         }
-
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeleteUser([FromRoute] Guid id)
-        //{
-        //    try
-        //    {
-        //        await repo.DeleteAsync(id);
-        //    }
-        //    catch (ArgumentException ex)
-        //    {
-        //        return NotFound(ex);
-        //    }
-
-        //    return NoContent();
-        //}
 
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
@@ -123,18 +106,5 @@ namespace API.Controllers
 
             return Ok(model);
         }
-
-        //[HttpGet("{email}")]
-        //public async Task<IActionResult> GetByEmail([FromRoute] string email)
-        //{
-        //    var user = await repo.GetByEmail(email);
-
-        //    if (user == null)
-        //        return NotFound();
-
-        //    var model = mapper.Map<UserResponseModel>(user);
-
-        //    return Ok(model);
-        //}
     }
 }

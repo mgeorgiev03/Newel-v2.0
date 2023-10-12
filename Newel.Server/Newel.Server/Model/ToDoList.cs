@@ -7,6 +7,8 @@ namespace Newel.Server.Model
         [Required]
         public string Name { get; set; }
 
-        public List<ToDoItem> Tasks { get; set; }
+        public Guid UserId { get; set; }
+
+        public virtual List<ToDoItem> Tasks { get; set; }
     }
 }

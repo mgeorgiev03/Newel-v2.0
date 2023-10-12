@@ -8,5 +8,10 @@ namespace Newel.Server.Repositories
         public ToDoListRepository(NewelDbContext _context) : base(_context)
         {
         }
+
+        public ValueTask<ToDoList> GetByName(string name)
+        {
+            return context.FindAsync<ToDoList>(name);
+        }
     }
 }

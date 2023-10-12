@@ -3,6 +3,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Newel.Server.Model;
 using Newel.Server.Repositories.IRepositories;
+using System.Linq.Expressions;
 
 namespace API.Controllers
 {
@@ -38,7 +39,13 @@ namespace API.Controllers
                 return BadRequest(ModelState);
 
             var list = mapper.Map<ToDoList>(model);
+
             list.Id = id;
+            list.Name = model.Name;
+            list.UserId = model.userId;
+
+            ToDoList entity = await repo.GetByIdAsync(id);
+            list.Tasks = entity.Tasks;
 
             try
             {
@@ -89,5 +96,18 @@ namespace API.Controllers
 
             return Ok(models);
         }
+
+        //[HttpGet("{name}")]
+        //public async Task<IActionResult> GetByName([FromRoute] string name)
+        //{
+        //    var list = await repo.GetByName(name);
+
+        //    if (list == null)
+        //        return NotFound();
+
+        //    var model = mapper.Map<ListResponseModel>(list);
+
+        //    return Ok(model);
+        //}
     }
 }

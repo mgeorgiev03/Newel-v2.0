@@ -1,0 +1,26 @@
+﻿@page
+@model EditModel
+@{
+}
+
+
+<form method="post">
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+
+    <button type="submit">Add</button>
+</form>
+
+
+<div class="text-center">
+
+    <div>Blank fields won't be changed</div>
+
+    <div class="container">
+        <button type="button">
+            <a asp-area="" asp-page="/UpdatePassword">Edit Password</a>
+        </button>
+    </div>
+
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</div>
